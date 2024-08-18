@@ -18,3 +18,7 @@ MonoBehaviour:
       Name: menu
     - Category: None
       Name: None
+    - Category: Recorder
+      Name: Record
+    - Category: Recorder
+      Name: Stop

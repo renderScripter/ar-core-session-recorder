@@ -16,5 +16,9 @@ MonoBehaviour:
     Items:
     - Category: None
       Name: None
+    - Category: Player
+      Name: SessionList
     - Category: RadialViews
       Name: MainMenu
+    - Category: Recorder
+      Name: Inputs
