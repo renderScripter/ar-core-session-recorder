@@ -210,8 +210,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
@@ -2874,6 +2874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3470641735955985316}
   - component: {fileID: 4260777111758055604}
+  - component: {fileID: 8324018336435420740}
   m_Layer: 5
   m_Name: Session Item
   m_TagString: Untagged
@@ -2899,7 +2900,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 75}
+  m_SizeDelta: {x: 0, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4260777111758055604
 MonoBehaviour:
@@ -3303,3 +3304,16 @@ MonoBehaviour:
     HasValue: 0
     IgnoreSignalValue: 1
     ReactToAnySignal: 1
+--- !u!114 &8324018336435420740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137935725478538899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546ebffcf3d94477a801f529154cc419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _labelContainer: {fileID: 8517025045771388879}

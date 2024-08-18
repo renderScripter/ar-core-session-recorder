@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: UIToggleIdDatabase
   m_EditorClassIdentifier: 
   Database:
-    Items: []
+    Items:
+    - Category: App
+      Name: ViewSwitch
+    - Category: None
+      Name: None
