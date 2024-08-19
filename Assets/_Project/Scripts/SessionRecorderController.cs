@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Doozy.Runtime.Common.Extensions;
 using Google.XR.ARCoreExtensions;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,24 +11,35 @@ using UnityEngine.XR.ARFoundation;
 
 namespace Render.Scripter.Session.Recorder
 {
-    public class SessionRecorderController : MonoBehaviour
+    public class SessionRecorderController : Singleton<SessionRecorderController>
     {
         private ARCoreRecordingConfig _config;
         private string _filePath;
         private RecordingStatus _lastStatus = RecordingStatus.None;
         private Uri _recordingUri;
-        
+        private string _filename;
+
         [SerializeField]
         private ARRecordingManager _recordingManager;
         // Start is called before the first frame update
         void Start()
         {
+            
+        }
+
+        public void SetFileName(string filename)
+        {
+            _filename = filename.IsNullOrEmpty() ? "ar-session" : filename;
+            _filename += ".mp4";
+        }
+        public void Setup()
+        {
             _config = ScriptableObject.CreateInstance<ARCoreRecordingConfig>();
-            _filePath = Path.Combine(Application.persistentDataPath, "session.mp4");
+            _filePath = Path.Combine(Application.persistentDataPath, _filename);
             _recordingUri = new Uri(_filePath);
             _config.Mp4DatasetUri = _recordingUri;
         }
-
+        
         public void StartRecording()
         {
             _recordingManager.StartRecording(_config);

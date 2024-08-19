@@ -42,7 +42,8 @@ namespace Doozy.Runtime.UIManager
         }
         public enum Recorder
         {
-            Inputs
+            Inputs,
+            Popup
         }    
     }
 }

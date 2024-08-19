@@ -19,6 +19,10 @@ MonoBehaviour:
     - Category: None
       Name: None
     - Category: Recorder
+      Name: Cancel
+    - Category: Recorder
       Name: Record
+    - Category: Recorder
+      Name: Save
     - Category: Recorder
       Name: Stop

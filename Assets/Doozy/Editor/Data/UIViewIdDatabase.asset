@@ -22,3 +22,5 @@ MonoBehaviour:
       Name: MainMenu
     - Category: Recorder
       Name: Inputs
+    - Category: Recorder
+      Name: Popup

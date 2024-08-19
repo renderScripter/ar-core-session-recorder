@@ -9,6 +9,7 @@ namespace Render.Scripter.Session.Utils
     public class ToggleRecorderViewer : MonoBehaviour
     {
         [SerializeField] private TMP_Text _label;
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -20,13 +21,17 @@ namespace Render.Scripter.Session.Utils
         {
         
         }
-        
+
         public void OnToggleView(bool status)
         {
             _label.text = status ? "Recorder" : "Viewer";
+
+            if (!status)
+            {
+                SessionEvents.Instance.onViewerActivated.Invoke();
+            }
         }
-        
-        
+
     }
 }
 
